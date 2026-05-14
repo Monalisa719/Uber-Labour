@@ -14,7 +14,7 @@ const useCreateWork = () => {
   useEffect(() => {
     axiosInstance
       .get("/api/user/categories")
-      .then((res) => setCategories(res.data?.categories || []))
+      .then((res) => setCategories(res.data || []))
       .catch(() => {}); // silently fall back to an empty array
   }, []);
 
