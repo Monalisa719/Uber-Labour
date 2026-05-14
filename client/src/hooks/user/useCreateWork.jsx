@@ -13,7 +13,7 @@ const useCreateWork = () => {
   // Fetch categories from the DB on mount
   useEffect(() => {
     axiosInstance
-      .get("/api/admin/categories")
+      .get("/api/user/categories")
       .then((res) => setCategories(res.data?.categories || []))
       .catch(() => {}); // silently fall back to an empty array
   }, []);
